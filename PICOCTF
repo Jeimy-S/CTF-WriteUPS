@@ -1,3 +1,23 @@
 Logon: 
 Logged into joes profile with the username being joe and the password * OR 1=1
 Changed admin cookie to True and reloaded the page which gave me the flag
+
+Login:
+First I inspected the source file, did not see anything weird in the html file but there was a javascript linked there. I opened the file and found an encrypted password.
+Put the password given in the javascript file in cypherchef which game the flag.
+
+Matryoshka doll:
+Used binwalk -e -C on the doll image
+Then used binwalk Matryoshka on the second image which extracted all of the files 
+Navigated to the last directory that was extracted from the 2nd image and found the flag text
+
+Glory of the Garden:
+Used exiftool garden and binwalk, both didn’t show a file hidden in the image
+Then I used strings on the image and the flag appeared at the end of the printed string
+
+Mind your Ps and Qs:
+Tried solving it the mathematical way, didn’t understand what was happening
+Searched for a RSA decryptor, plugged in the values which were given, and received the flag.
+
+The Numbers:
+The numbers that where in the image matched with the alphabet, since I already know the pattern of the flags I know the first 7 letters are picoCTF, this corroborated with the numbers 
