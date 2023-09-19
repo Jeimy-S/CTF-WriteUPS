@@ -1,0 +1,3 @@
+Logon: 
+Logged into joes profile with the username being joe and the password * OR 1=1
+Changed admin cookie to True and reloaded the page which gave me the flag
