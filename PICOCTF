@@ -21,3 +21,19 @@ Searched for a RSA decryptor, plugged in the values which were given, and receiv
 
 The Numbers:
 The numbers that where in the image matched with the alphabet, since I already know the pattern of the flags I know the first 7 letters are picoCTF, this corroborated with the numbers 
+
+Includes(web expl):
+Looked at the html file, then looked at the css file, which had the first part of the flag, and went back and looked at the javascript file which had the second part of the flag.
+
+Local Authority:
+Had an username and password input box, thought it had to do with sql injection, so I tried “* OR 1=1” that didn’t work however so I decided to inspect the page, and found that it had a secure.js file, 
+I clicked on that and it had the user name and password. I used that username and password combination on the website and I received the flag.
+
+Enhance!:
+Didn’t know what an svg file was so I searched that up. Before I searched it up I did binwalk and exiftool to see if the picture had something hidden in it but it didn’t, thats when I decided to search up the file type and learned that: 
+“Scalable Vector Graphics, or SVG, is a widely-used XML-based vector image format that allows for the creation of two-dimensional vector graphics. SVG images are resolution-independent, meaning they can be scaled up or down without losing 
+image quality, making them ideal for various purposes like web design, icons, logos, and illustrations. Here are some key characteristics and features of SVG images:” with the help of chat gpt, which also provided this example:
+Thats when I realized that I could inspect the image, which opened up in my browser and found the flag divided in the code.
+
+Redaction gone Wrong:
+This problem gave a pdf file which I first downloaded it and ran cat [filename] in the terminal and couldn’t find anything obvious. Then I decided to open the file in a PDF reader and it had some of the text boxed out in black. I clicked on the last box and that was the flag. 
